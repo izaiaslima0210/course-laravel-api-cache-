@@ -81,5 +81,5 @@ Metricas e performace de cache nas requisções com o laravel-telescope
     -- Realizar instação: php artisan telescope:install
 
 -   Migrar banco de dados
-    -- php artisan migrate
-    -- Acessar a rota telescope
+    -   php artisan migrate
+    -   Acessar a rota telescope
