@@ -1,1 +1,11 @@
 GET http://localhost:8989/courses/
+
+###
+
+POST http://localhost:8989/courses
+content-type: application/json
+
+{
+    "name": "Curso 02",
+    "description": "testando primeiro curso criado"
+}
