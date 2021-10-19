@@ -72,3 +72,14 @@ Baixar repositório,
 -   executar docker-compose up -d
 -   acessar container com docker-compose exec name bash ,
 -   instalar dependências do composer e gerar php artisan key:generate
+
+## Dependências adicionadas ao Projeto
+
+Metricas e performace de cache nas requisções com o laravel-telescope
+
+-   composer require laravel/telescope
+    -- Realizar instação: php artisan telescope:install
+
+-   Migrar banco de dados
+    -- php artisan migrate
+    -- Acessar a rota telescope
