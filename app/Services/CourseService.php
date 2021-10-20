@@ -28,4 +28,9 @@ class CourseService
     {
         return $this->repository->getCourseByUuid($identify);
     }
+
+    public function deleteCourse(string $identify)
+    {
+        return $this->repository->deleteCourseByUuid($identify);
+    }
 }

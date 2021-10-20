@@ -13,3 +13,7 @@ content-type: application/json
     "name": "Curso 02",
     "description": "testando primeiro curso criado"
 }
+
+###
+
+DELETE http://localhost:8989/courses/f12bfffc-846f-4b07-beaf-5b9c1e19bb09
