@@ -2,7 +2,7 @@ GET http://localhost:8989/courses/
 
 ###
 
-GET http://localhost:8989/courses/f12bfffc-846f-4b07-beaf-5b9c1e19bb09
+GET http://localhost:8989/courses/2d34ff35-995b-4dbc-922c-46091e6b7c94
 
 ###
 
@@ -10,8 +10,18 @@ POST http://localhost:8989/courses
 content-type: application/json
 
 {
-    "name": "Curso 02",
+    "name": "Curso 01",
     "description": "testando primeiro curso criado"
+}
+
+###
+
+PUT http://localhost:8989/courses/2d34ff35-995b-4dbc-922c-46091e6b7c94
+content-type: application/json
+
+{
+    "name": "Curso 02",
+    "description": "Alterando a descrição do curso criado"
 }
 
 ###
