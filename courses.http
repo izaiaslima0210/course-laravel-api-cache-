@@ -2,6 +2,10 @@ GET http://localhost:8989/courses/
 
 ###
 
+GET http://localhost:8989/courses/f12bfffc-846f-4b07-beaf-5b9c1e19bb09
+
+###
+
 POST http://localhost:8989/courses
 content-type: application/json
 
