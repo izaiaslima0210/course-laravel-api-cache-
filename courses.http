@@ -2,7 +2,7 @@ GET http://localhost:8989/courses/
 
 ###
 
-GET http://localhost:8989/courses/2d34ff35-995b-4dbc-922c-46091e6b7c94
+GET http://localhost:8989/courses/3572062c-3675-4a8f-a6b2-9f0616e2f1ea
 
 ###
 
@@ -16,11 +16,11 @@ content-type: application/json
 
 ###
 
-PUT http://localhost:8989/courses/2d34ff35-995b-4dbc-922c-46091e6b7c94
+PUT http://localhost:8989/courses/3572062c-3675-4a8f-a6b2-9f0616e2f1ea
 content-type: application/json
 
 {
-    "name": "Curso 02",
+    "name": "Curso 01",
     "description": "Alterando a descrição do curso criado"
 }
 
@@ -30,16 +30,16 @@ DELETE http://localhost:8989/courses/f12bfffc-846f-4b07-beaf-5b9c1e19bb09
 
 ###
 
-GET http://localhost:8989/courses/2d34ff35-995b-4dbc-922c-46091e6b7c94/modules
+GET http://localhost:8989/courses/3572062c-3675-4a8f-a6b2-9f0616e2f1ea/modules
 
 ###
 
-POST http://localhost:8989/courses/2d34ff35-995b-4dbc-922c-46091e6b7c94/modules
+POST http://localhost:8989/courses/3572062c-3675-4a8f-a6b2-9f0616e2f1ea/modules
 
 content-type: application/json
 
 {
-    "course":"2d34ff35-995b-4dbc-922c-46091e6b7c94",
-    "name": "EAD-Laravel"
+   "course": "3572062c-3675-4a8f-a6b2-9f0616e2f1ea",
+   "name": "EAD-01"
 
 }
