@@ -18,8 +18,6 @@ class ModuleController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return App\Http\Requests\StoreUpdateModule
-
      */
     public function index($course)
     {
@@ -32,7 +30,7 @@ class ModuleController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  StoreUpdateModule  $request
-     * @return App\Http\Requests\StoreUpdateModule
+     * @return App\Http\Resource\ModuleResource
 
      */
     public function store(StoreUpdateModule $request, $course)

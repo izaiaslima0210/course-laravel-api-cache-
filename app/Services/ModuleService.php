@@ -8,7 +8,7 @@ use App\Repositories\ModuleRepository;
 class ModuleService
 {
 
-    protected $repository, $courseRepository;
+    protected $moduleRepository, $courseRepository;
     public function __construct(
         ModuleRepository $moduleRepository,
         CourseRepository $courseRepository
@@ -31,7 +31,9 @@ class ModuleService
     public function createNewModule(array $data)
     {
 
-        return $this->moduleRepository->createNewModule($this->getCourse($data['course']), $data);
+        $course = $this->getCourse($data['course']);
+
+        return $this->moduleRepository->createNewModule($course, $data);
     }
 
     public function getModuleByCourseUuid(string $course, string $identify)

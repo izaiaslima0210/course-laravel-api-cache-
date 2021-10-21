@@ -7,9 +7,9 @@ use App\Models\Module;
 class ModuleRepository
 {
     protected $entity;
-    public function __construct(Module $Module)
+    public function __construct(Module $module)
     {
-        $this->entity = $Module;
+        $this->entity = $module;
     }
 
     public function getModulesCourse(int $course)
@@ -19,6 +19,7 @@ class ModuleRepository
     public function createNewModule(int $courseId, array $data)
     {
         $data['course_id'] = $courseId;
+
         return $this->entity->create($data);
     }
     public function getModuleByCourse(string $indetify, int $course)

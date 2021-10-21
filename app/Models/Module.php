@@ -14,4 +14,9 @@ class Module extends Model
     {
         return $this->belongsTo(Course::class);
     }
+
+    public function Lesson()
+    {
+        return $this->hasMany(Lesson::class);
+    }
 }
