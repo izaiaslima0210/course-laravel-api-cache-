@@ -3,18 +3,18 @@
 namespace App\Observers;
 
 use Illuminate\Support\Str;
-use App\Models\course;
+use App\Models\Course;
 
 
-class CourserObserver
+class CourseObserver
 {
     /**
      * Handle the course "creating" event.
      *
-     * @param  \App\Models\course  $course
+     * @param  \App\Models\Course  $course
      * @return void
      */
-    public function creating(course $course)
+    public function creating(Course $course)
     {
         $course->uuid = (string) Str::uuid();
     }

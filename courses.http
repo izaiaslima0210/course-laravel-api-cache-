@@ -27,3 +27,19 @@ content-type: application/json
 ###
 
 DELETE http://localhost:8989/courses/f12bfffc-846f-4b07-beaf-5b9c1e19bb09
+
+###
+
+GET http://localhost:8989/courses/2d34ff35-995b-4dbc-922c-46091e6b7c94/modules
+
+###
+
+POST http://localhost:8989/courses/2d34ff35-995b-4dbc-922c-46091e6b7c94/modules
+
+content-type: application/json
+
+{
+    "course":"2d34ff35-995b-4dbc-922c-46091e6b7c94",
+    "name": "EAD-Laravel"
+
+}
