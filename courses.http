@@ -2,7 +2,7 @@ GET http://localhost:8989/courses/
 
 ###
 
-GET http://localhost:8989/courses/3572062c-3675-4a8f-a6b2-9f0616e2f1ea
+GET http://localhost:8989/courses/9dddb80a-9190-484a-80a8-22bbe0765dbc
 
 ###
 
@@ -16,7 +16,7 @@ content-type: application/json
 
 ###
 
-PUT http://localhost:8989/courses/3572062c-3675-4a8f-a6b2-9f0616e2f1ea
+PUT http://localhost:8989/courses/9dddb80a-9190-484a-80a8-22bbe0765dbc
 content-type: application/json
 
 {
@@ -30,16 +30,16 @@ DELETE http://localhost:8989/courses/f12bfffc-846f-4b07-beaf-5b9c1e19bb09
 
 ###
 
-GET http://localhost:8989/courses/3572062c-3675-4a8f-a6b2-9f0616e2f1ea/modules
+GET http://localhost:8989/courses/9dddb80a-9190-484a-80a8-22bbe0765dbc/modules
 
 ###
 
-POST http://localhost:8989/courses/3572062c-3675-4a8f-a6b2-9f0616e2f1ea/modules
+POST http://localhost:8989/courses/9dddb80a-9190-484a-80a8-22bbe0765dbc/modules
 
 content-type: application/json
 
 {
-   "course": "3572062c-3675-4a8f-a6b2-9f0616e2f1ea",
-   "name": "EAD-01"
+   "course": "9dddb80a-9190-484a-80a8-22bbe0765dbc",
+    "name": "EAD 01"
 
 }

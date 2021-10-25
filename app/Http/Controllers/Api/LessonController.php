@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateLesson;
+use App\Http\Resources\LessonResource;
 use App\Services\LessonService;
-use App\Services\ModuleService;
 use Illuminate\Http\Request;
 
 class LessonController extends Controller
@@ -14,16 +14,17 @@ class LessonController extends Controller
 
     public function __construct(LessonService $lessonService)
     {
-        return $this->$lessonService = $lessonService;
+        $this->$lessonService = $lessonService;
     }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($module)
     {
-        //
+        $lesson = $this->lessonService->getLessonsBymodule($module);
+        return LessonResource::collection($lesson);
     }
 
     /**
@@ -32,9 +33,10 @@ class LessonController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUpdateLesson $request)
+    public function store(StoreUpdateLesson $request, $module)
     {
-        //
+        $lesson = $this->lessonService->createNewLesson($request->validated());
+        return new LessonResource($lesson);
     }
 
     /**

@@ -24,12 +24,8 @@ class StoreUpdateModule extends FormRequest
     public function rules()
     {
         return [
-            'name' => [
-                'required', 'min:3', 'max:255'
-            ],
-            'course' => [
-                'required', 'exists:courses,uuid'
-            ],
+            'course' => ['required', 'exists:courses,uuid'],
+            'name' => ['required', 'min:3', 'max:255'],
         ];
     }
 }
