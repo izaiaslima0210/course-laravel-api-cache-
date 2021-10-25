@@ -10,10 +10,10 @@ use Illuminate\Http\Request;
 
 class ModuleController extends Controller
 {
-    protected $ModuleService;
+    protected $moduleService;
     public function __construct(ModuleService $ModuleService)
     {
-        $this->ModuleService = $ModuleService;
+        $this->moduleService = $ModuleService;
     }
     /**
      * Display a listing of the resource.
@@ -22,7 +22,7 @@ class ModuleController extends Controller
     public function index($course)
     {
 
-        $Modules = $this->ModuleService->getModulesByCourse($course);
+        $Modules = $this->moduleService->getModulesByCourse($course);
         return ModuleResource::collection($Modules);
     }
 
@@ -35,7 +35,7 @@ class ModuleController extends Controller
      */
     public function store(StoreUpdateModule $request, $course)
     {
-        $module = $this->ModuleService->createNewModule($request->validated());
+        $module = $this->moduleService->createNewModule($request->validated());
         return new ModuleResource($module);
     }
 
@@ -46,7 +46,7 @@ class ModuleController extends Controller
      */
     public function show($course, $identify)
     {
-        $module = $this->ModuleService->getModuleByCourseUuid($course, $identify);
+        $module = $this->moduleService->getModuleByCourseUuid($course, $identify);
         return new ModuleResource($module);
     }
 
@@ -59,7 +59,7 @@ class ModuleController extends Controller
      */
     public function update(StoreUpdateModule $request, $course, $identify)
     {
-        $this->ModuleService->updateModule($identify, $request->validated());
+        $this->moduleService->updateModule($identify, $request->validated());
         return response()->json(['message' => 'update Module!']);
     }
 
@@ -71,7 +71,7 @@ class ModuleController extends Controller
      */
     public function destroy($course, $module)
     {
-        $this->ModuleService->deleteModule($module);
+        $this->moduleService->deleteModule($module);
         return response()->json([], 204);
     }
 }

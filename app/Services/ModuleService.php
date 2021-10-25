@@ -10,10 +10,10 @@ class ModuleService
 
     protected $moduleRepository, $courseRepository;
     public function __construct(
-        ModuleRepository $moduleRepository,
+        ModuleRepository $ModuleRepository,
         CourseRepository $courseRepository
     ) {
-        $this->moduleRepository = $moduleRepository;
+        $this->moduleRepository = $ModuleRepository;
         $this->courseRepository = $courseRepository;
     }
 

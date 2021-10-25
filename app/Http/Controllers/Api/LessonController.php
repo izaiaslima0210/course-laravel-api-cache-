@@ -12,9 +12,9 @@ class LessonController extends Controller
 {
     protected $lessonService;
 
-    public function __construct(LessonService $lessonService)
+    public function __construct(LessonService $LessonService)
     {
-        $this->$lessonService = $lessonService;
+        $this->$lessonService = $LessonService;
     }
     /**
      * Display a listing of the resource.
@@ -59,7 +59,7 @@ class LessonController extends Controller
      */
     public function update(StoreUpdateLesson $request, $id)
     {
-        //
+    $this->
     }
 
     /**
