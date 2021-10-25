@@ -11,10 +11,10 @@ class ModuleService
     protected $moduleRepository, $courseRepository;
     public function __construct(
         ModuleRepository $ModuleRepository,
-        CourseRepository $courseRepository
+        CourseRepository $CourseRepository
     ) {
         $this->moduleRepository = $ModuleRepository;
-        $this->courseRepository = $courseRepository;
+        $this->courseRepository = $CourseRepository;
     }
 
     public function getCourse(string $course)
